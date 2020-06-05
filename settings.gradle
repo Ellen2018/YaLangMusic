@@ -1,0 +1,4 @@
+include ':javabase'
+include ':base'
+include ':app'
+rootProject.name = "YaLangMusic"
