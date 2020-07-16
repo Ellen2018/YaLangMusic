@@ -1,4 +1,4 @@
-package com.ellen.javabase.simpleapi.ALifeListener;
+package com.ellen.javabase.simpleapi.ActivityLifeListener;
 
 public interface ActivityLifeListener {
     void onStart();

@@ -1,4 +1,4 @@
-package com.ellen.javabase.utils.statusutil;
+package com.ellen.javabase.uitil.statusutil;
 
 import android.os.Build;
 import android.text.TextUtils;

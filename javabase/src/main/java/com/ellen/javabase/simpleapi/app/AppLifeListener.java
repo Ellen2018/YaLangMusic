@@ -14,12 +14,19 @@ public abstract class AppLifeListener implements Application.ActivityLifecycleCa
 
     private int lifeActivityCount = 0;
     private boolean isAppBack = false;
+    //是否冷启动
+    private boolean isColdLaunch = true;
     private List<Activity> activityList;
 
     @Override
     public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
         if (lifeActivityCount == 0) {
-            onAppLaunch();
+            if(isColdLaunch) {
+                onAppLaunch(true);
+                isColdLaunch = false;
+            }else {
+                onAppLaunch(false);
+            }
         }
         if (activityList == null) {
             activityList = new ArrayList<>();
@@ -37,7 +44,7 @@ public abstract class AppLifeListener implements Application.ActivityLifecycleCa
         lifeActivityCount++;
         if (isAppBack) {
             //从后台切换至前台
-            onSwitchLife();
+            onSwitchFront();
             isAppBack = false;
         }
     }
@@ -67,13 +74,18 @@ public abstract class AppLifeListener implements Application.ActivityLifecycleCa
         activityList.remove(activity);
         if (activityList != null && activityList.size() == 0) {
             onCloseApp();
+
+            //初始化
+            lifeActivityCount = 0;
+            isAppBack = false;
+            activityList.clear();
         }
     }
 
     /**
      * 应用首次启动的时候调用
      */
-    protected abstract void onAppLaunch();
+    protected abstract void onAppLaunch(boolean isColdLaunch);
 
     /**
      * 切换至后台时调用
@@ -83,7 +95,7 @@ public abstract class AppLifeListener implements Application.ActivityLifecycleCa
     /**
      * 从后台切换至前台时调用
      */
-    protected abstract void onSwitchLife();
+    protected abstract void onSwitchFront();
 
     /**
      * 关闭应用时回调

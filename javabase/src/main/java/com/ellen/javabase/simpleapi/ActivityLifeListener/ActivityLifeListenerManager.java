@@ -1,4 +1,4 @@
-package com.ellen.javabase.simpleapi.ALifeListener;
+package com.ellen.javabase.simpleapi.ActivityLifeListener;
 
 import androidx.fragment.app.FragmentActivity;
 

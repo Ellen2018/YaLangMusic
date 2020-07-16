@@ -46,13 +46,12 @@ abstract class AppLifeListener:Application.ActivityLifecycleCallbacks{
         if(lifeActivityCount == 0){
             if(isColdLaunch) {
                 //冷启动
-                onAppColdLaunch()
+                onAppLaunch(true)
                 isColdLaunch = false
             }else{
                 //热启动 & 温启动
-                onAppHeartLaunch()
+                onAppLaunch(false)
             }
-            onAppLaunch()
         }
         activityList.add(activity)
     }
@@ -67,18 +66,9 @@ abstract class AppLifeListener:Application.ActivityLifecycleCallbacks{
 
     /**
      * 只要应用启动就会调用
+     * isColdLaunch:是否冷启动
      */
-    protected abstract fun onAppLaunch()
-
-    /**
-     * 应用启动的时候调用(冷启动)
-     */
-    protected open fun onAppColdLaunch(){}
-
-    /**
-     * 应用启动的时候调用(热启动)
-     */
-    protected open fun onAppHeartLaunch(){}
+    protected abstract fun onAppLaunch(isColdLaunch: Boolean)
 
     /**
      * 切换至后台时调用

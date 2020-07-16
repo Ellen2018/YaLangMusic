@@ -34,7 +34,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="头部" />
+                    android:text="@{test.str}" />
 
             </RelativeLayout>
 
@@ -54,12 +54,10 @@
             android:layout_gravity="start"
             android:background="@color/colorPrimary">
 
-            <TextView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="侧滑栏"
-                android:textColor="@color/colorAccent" />
+                android:layout_height="match_parent" />
 
         </RelativeLayout>
 

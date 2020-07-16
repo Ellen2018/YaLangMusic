@@ -11,10 +11,14 @@ class App : Application() {
 
         registerActivityLifecycleCallbacks(object : AppLifeListener() {
 
-            override fun onAppLaunch() {
-                //app启动
-                Log.e("Ellen2018", "启动")
+            override fun onAppLaunch(isColdLaunch: Boolean) {
+               if(isColdLaunch){
+                   //冷启动
+               }else{
+                   //热启动 & 温启动
+               }
             }
+
 
             override fun onSwitchBack() {
                 //app切换至后台
@@ -30,17 +34,6 @@ class App : Application() {
                 //app关闭了
                 Log.e("Ellen2018", "关闭")
             }
-
-            override fun onAppHeartLaunch() {
-                //app冷启动时调用
-                Log.e("Ellen2018", "热启动")
-            }
-
-            override fun onAppColdLaunch() {
-                //app热启动时调用
-                Log.e("Ellen2018", "冷启动")
-            }
-
         });
     }
 
