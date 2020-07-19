@@ -1,6 +1,7 @@
 package com.ellen.base.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +9,7 @@ import android.view.ViewGroup
 abstract class BaseSingleRecyclerViewAdapter<VH : BaseViewHolder, D>(
     var dataList: List<D>,
     var mContext: Context
-) : BaseRecyclerViewAdapter<VH>() {
+) : BaseRecyclerViewAdapter<VH,D>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         var view = LayoutInflater.from(mContext).inflate(getItemLayoutId(), null)
@@ -20,12 +21,19 @@ abstract class BaseSingleRecyclerViewAdapter<VH : BaseViewHolder, D>(
     }
 
     override fun onBindViewHolder(holder: VH, position: Int) {
-        showData(holder, dataList[position], position)
-        if(onItemClickListener != null){
-            holder.itemView.setOnClickListener {
-                onItemClickListener.onItemClick(holder as Nothing,position)
+        holder.itemView.setOnClickListener{
+            if(onItemClickListener != null) {
+                onItemClickListener?.onItemClick(holder, dataList[position], position)
             }
         }
+        holder.itemView.setOnLongClickListener {
+            if(onItemLongClickListener != null) {
+                onItemLongClickListener?.onItemLongClick(holder, dataList[position], position)!!
+            }else{
+                false
+            }
+        }
+        showData(holder, dataList[position], position)
     }
 
     /**

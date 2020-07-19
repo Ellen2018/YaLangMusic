@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@mipmap/android_7_1_car"
+        android:layout_height="120dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Mercedes Benz E200(2009)"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="SKB2654J"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/yuan_jiao_gary"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="SKB2654J"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>
