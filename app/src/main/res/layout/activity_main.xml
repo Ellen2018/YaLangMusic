@@ -7,7 +7,7 @@
 
         <variable
             name="test"
-            type="com.ellen.yalangmusic.bean.Test" />
+            type="com.ellen.yalangmusic.bean.Android7KeyValue" />
 
     </data>
 
@@ -34,7 +34,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="@{test.str}" />
+                    android:text="@{test.key}" />
 
             </RelativeLayout>
 

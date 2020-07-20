@@ -18,10 +18,9 @@ class RecyclerViewActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         val baseNullAdapter = BaseNullAdapter(this)
         recyclerView.adapter = baseNullAdapter
-        var view = baseNullAdapter.addViewByLayoutId(1,R.layout.layout_1)
         baseNullAdapter.addViewByLayoutId(2,R.layout.layout_2)
+        var view = baseNullAdapter.addViewByLayoutId(1,R.layout.layout_1)
         baseNullAdapter.addViewByLayoutId(3,R.layout.layout_0)
-        baseNullAdapter.removePosition(2)
     }
 
 }

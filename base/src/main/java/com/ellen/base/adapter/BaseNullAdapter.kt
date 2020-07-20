@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
 /**
@@ -17,7 +18,7 @@ class BaseNullAdapter(var mContext: Context) :
 
     private var typeMap: SortedMap<Int, Int>? = null
     private var viewMap: MutableMap<Int, View>? = null
-    private var adjustMap:MutableMap<Int,Int>? = null
+    private var adjustList:MutableList<Int>? = null
     private lateinit var recyclerView:RecyclerView
 
 
@@ -40,14 +41,15 @@ class BaseNullAdapter(var mContext: Context) :
     }
 
     private fun adjust(){
-        adjustMap = HashMap()
-        var p = 0
+        adjustList = ArrayList()
         for((key,value) in typeMap!!){
-            adjustMap!![p] = key
-            p++
+            adjustList!!.add(value)
         }
     }
 
+    /**
+     * 移除
+     */
     fun removeView(view:View){
         var typeValue = -1
         for((key,value) in viewMap!!){
@@ -60,20 +62,65 @@ class BaseNullAdapter(var mContext: Context) :
         }
     }
 
+    /**
+     * 清空
+     */
+    fun clear(){
+        adjustList!!.clear()
+        viewMap!!.clear()
+        typeMap!!.clear()
+        notifyDataSetChanged()
+    }
+
+    /**
+     * 翻转
+     */
+    fun upsideDown(){
+        for(index in 0 until (adjustList!!.size-1)/2){
+           val valueCopy = adjustList!![index]
+            val index2 = adjustList!!.size-index-1
+            adjustList!![index] = adjustList!![index2]
+            adjustList!![index2] = valueCopy
+        }
+        notifyDataSetChanged()
+    }
+
     fun  removePosition(position: Int){
         var removePosition = -1
-        for((key,value) in adjustMap!!) {
-            if(value == position){
-                removePosition = key
-            }
+        for((index,value) in adjustList!!.withIndex()) {
+           if(value == position){
+               removePosition = index
+               break
+           }
         }
         if(removePosition >= 0) {
-            adjustMap!!.remove(removePosition)
+            adjustList!!.removeAt(removePosition)
             typeMap!!.remove(position)
             viewMap!!.remove(position)
-            adjust()
             notifyDataSetChanged()
         }
+    }
+
+    /**
+     * 交换
+     */
+    fun exChange(index1:Int,index2:Int){
+        var i1:Int = -1
+        var i2:Int = -1
+        for((index,value) in adjustList!!.withIndex()){
+            if(index1 == value){
+                i1 = index
+            }
+            if(index2 == value){
+                i2 = index
+            }
+        }
+        if(i1 >= 0 && i2 >= 0){
+            val valueCopy = adjustList!![i1]
+            adjustList!![i1] = adjustList!![i2]
+            adjustList!![i2] = valueCopy
+        }
+        notifyDataSetChanged()
     }
 
     fun addViewByLayoutId(position: Int,id:Int):View{
@@ -84,8 +131,8 @@ class BaseNullAdapter(var mContext: Context) :
 
 
     override fun getItemViewType(position: Int): Int {
-        var p = adjustMap!![position]
-        var typeValue = typeMap!![p]
+        val p = adjustList!![position]
+        val typeValue = typeMap!![p]
         return typeValue!!
     }
 
@@ -95,7 +142,7 @@ class BaseNullAdapter(var mContext: Context) :
     }
 
     override fun getItemCount(): Int {
-        return adjustMap!!.size
+        return adjustList!!.size
     }
 
     override fun onBindViewHolder(holder: PositionViewHolder, position: Int) {
