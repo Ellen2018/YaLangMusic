@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        app:contentInsetStart="0dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:textColor="#333333"
+            android:lineSpacingExtra="4sp"
+            android:text="Mercedes Benz E200(2009)"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="58dp"
+            android:layout_gravity="right"
+            android:padding="23dp"
+            android:src="@drawable/cancel"
+            android:layout_height="58dp"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_below="@id/tool_bar"
+        android:layout_width="match_parent"
+        android:background="#E8E8E8"
+        android:layout_height="1px"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_below="@id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

@@ -8,67 +8,81 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
             android:gravity="center_vertical"
             android:text="View all information about your car and get the latest trade-in value of your car."
             android:textColor="#333333"
             android:textSize="13sp" />
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_width="169dp"
+            android:layout_height="59dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="98dp"
             android:src="@mipmap/android_7_1_car" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="75dp"
             android:gravity="center"
+            android:lineSpacingExtra="4sp"
             android:text="Mercedes Benz E200(2009)"
             android:textColor="#333333"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="99dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="99dp"
             android:gravity="center"
             android:text="SKB2654J"
             android:textColor="#333333"
             android:textSize="13sp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="110dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/yuan_jiao_gary"
-            android:orientation="vertical"
-            android:paddingLeft="30dp"
-            android:paddingTop="20dp"
-            android:paddingRight="30dp"
-            android:paddingBottom="20dp">
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/yuan_jiao_gary">
 
             <TextView
+                android:id="@+id/tv_dollar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="60dp"
                 android:gravity="center"
                 android:text="$123,000"
                 android:textColor="#FC5600"
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/tv_estimated"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/tv_dollar"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="25dp"
                 android:gravity="center"
                 android:text="Estimated trade-in value"
                 android:textColor="#191919"
@@ -76,32 +90,43 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_height="15dp"
+                android:layout_below="@id/tv_estimated"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginBottom="16dp"
                 android:gravity="center"
                 android:text="Tap to refresh quote"
                 android:textColor="#9A9A9A"
                 android:textSize="11sp" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:nestedScrollingEnabled="false"
-            android:layout_marginTop="20dp" />
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="24dp"
+            android:nestedScrollingEnabled="false" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/tv_view_detailed"
+            android:layout_width="203dp"
+            android:layout_height="35dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:textSize="14sp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/yuan_jiao_orange"
-            android:padding="10dp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="10dp"
             android:text="View detailed information"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
 
     </LinearLayout>
 

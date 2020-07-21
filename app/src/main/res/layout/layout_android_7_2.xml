@@ -6,31 +6,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="44dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
             android:layout_gravity="center_horizontal"
             android:text="Manager your car"
+            android:lineSpacingExtra="4sp"
             android:textColor="#333333"
             android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:layout_marginLeft="50dp"
+            android:layout_height="60dp"
+            android:gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="50dp"
             android:orientation="horizontal">
 
             <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="8dp"
                 android:background="@drawable/yuan_jiao_blue"
                 android:orientation="vertical">
 
@@ -42,18 +40,18 @@
 
                     <ImageView
                         android:id="@+id/iv_sell_car"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
                         android:layout_centerHorizontal="true"
                         android:layout_gravity="center_horizontal"
                         android:src="@mipmap/icons8_cash_64_1" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="17dp"
+                        android:gravity="center_horizontal|top"
+                        android:layout_marginTop="5dp"
                         android:layout_below="@id/iv_sell_car"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal"
                         android:textSize="10sp"
                         android:text="Sell Car"
                         android:textColor="#ffffff" />
@@ -63,11 +61,9 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="8dp"
                 android:background="@drawable/yuan_jiao_blue"
                 android:orientation="vertical">
 
@@ -79,20 +75,20 @@
 
                     <ImageView
                         android:id="@+id/iv_book_svc"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
                         android:layout_centerHorizontal="true"
                         android:layout_gravity="center_horizontal"
                         android:src="@mipmap/icons8_engine_oil_40_1" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="17dp"
+                        android:gravity="center_horizontal|top"
+                        android:layout_marginTop="5dp"
                         android:layout_below="@id/iv_book_svc"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal"
-                        android:text="Book svc"
                         android:textSize="10sp"
+                        android:text="Book Svc"
                         android:textColor="#ffffff" />
 
                 </RelativeLayout>
@@ -100,11 +96,9 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="8dp"
                 android:background="@drawable/yuan_jiao_blue"
                 android:orientation="vertical">
 
@@ -116,20 +110,20 @@
 
                     <ImageView
                         android:id="@+id/iv_view_docs"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
                         android:layout_centerHorizontal="true"
                         android:layout_gravity="center_horizontal"
                         android:src="@mipmap/icons8_documents_96_1" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="17dp"
+                        android:gravity="center_horizontal|top"
+                        android:layout_marginTop="5dp"
                         android:layout_below="@id/iv_view_docs"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal"
-                        android:text="View docs"
                         android:textSize="10sp"
+                        android:text="Sell Car"
                         android:textColor="#ffffff" />
 
                 </RelativeLayout>

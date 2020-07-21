@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">@color/flush_orange</color>
+    <color name="colorPrimaryDark">@color/flush_orange</color>
+    <color name="colorAccent">@color/grey_500</color>
+    <color name="colorAccentDark">@color/grey_700</color>
+    <color name="colorNightDark">@color/cod_gray</color>
+    <color name="colorPrimaryNightDark">@color/white</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/alto</color>
+
+    <color name="white">#fff</color>
+    <color name="white_700">#ccc</color>
+    <color name="grey_700">#5E6275</color>
+    <color name="grey_500">#8B8FA4</color>
+    <color name="grey_200">#BBBFD5</color>
+    <color name="grey">#FF8B8FA4</color>
+    <color name="light_grey">#FFC5C8D8</color>
+
+    <color name="solitude">#ECF7FF</color>
+    <color name="cornflower_blue">#5B8FFE</color>
+    <color name="flush_orange">#FF7700</color>
+    <color name="supernova">#FFC900</color>
+    <color name="burnt_sienna">#ED6867</color>
+    <color name="burning_orange">#FC6F30</color>
+    <color name="neon_carrot">#FEA13A</color>
+    <color name="orange">#FF5722</color>
+    <color name="orange_30_percent">#55FF5722</color>
+    <color name="cinnabar">#E64A19</color>
+    <color name="malibu">#83ADFF</color>
+    <color name="dodger_blue">#3490FD</color>
+    <color name="golden_tainoi">#FFC857</color>
+    <color name="quarter_pearl_lusta">#FFFDF8</color>
+    <color name="bali_hai">#8F9BB3</color>
+    <color name="mine_shaft">#333333</color>
+    <color name="cod_gray">#121212</color>
+    <color name="dove_gray">#686868</color>
+    <color name="dove_gray_60percent">#996D6D6D</color>
+    <color name="dusty_grey">#9A9A9A</color>
+    <color name="scorpion">#595959</color>
+    <color name="black_overlay">#33000000</color>
+    <color name="black_30_percent">#55333333</color>
+    <color name="concrete">#F2F2F2</color>
+    <color name="storm_grey">#686C80</color>
+    <color name="tundora">#4C4C4C</color>
+    <color name="bridal_heath">#FFF9F3</color>
+    <color name="submarine">#C4CACC</color>
+    <color name="lima">#59C825</color>
+    <color name="transparent_grey">#AA000000</color>
+    <color name="zircon">#F8FAFF</color>
+    <color name="cadet_blue">#ACB3BF</color>
+    <color name="orange_peel">#33FF9900</color>
+    <color name="alabaster">#F9F9F9</color>
+    <color name="provincial_pink">#FEF7EE</color>
+    <color name="paradiso">#3E8D95</color>
+    <color name="ebony_clay">#28323D</color>
+    <color name="sazerac">#FFF3E0</color>
+    <color name="barley_white">#FFF2D0</color>
+    <color name="alto">#DCDCDC</color>
+    <color name="ghost">#C5C8D8</color>
+    <color name="trinidadapprox">#E65100</color>
+    <color name="error_red">#E74C3C</color>
+
 </resources>

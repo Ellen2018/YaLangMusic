@@ -33,6 +33,7 @@ class DataAdapter(dataList:MutableList<Android7KeyValue>,mContext:Context) :
        holder.tvValue.text = data.value
        if(data.isShowTips){
           holder.viewStub.visibility = View.VISIBLE
+
        } else{
            holder.viewStub.visibility = View.GONE
        }
