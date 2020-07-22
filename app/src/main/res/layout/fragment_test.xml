@@ -8,8 +8,8 @@
         android:layout_width="match_parent"
         android:layout_margin="20dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/edit_text_background"
+        android:background="@drawable/edit_text_test"
         android:textCursorDrawable="@drawable/edit_text_cursor_color"
-        android:layout_height="?actionBarSize"/>
+        android:layout_height="60dp"/>
 
 </RelativeLayout>

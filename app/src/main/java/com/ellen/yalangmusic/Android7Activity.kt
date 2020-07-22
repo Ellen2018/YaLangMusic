@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Rect
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
@@ -34,8 +35,9 @@ class Android7Activity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         var view = baseNullAdapter.addViewByLayoutId(0,R.layout.layout_android_7_1)
         view.findViewById<TextView>(R.id.tv_view_detailed).setOnClickListener {
-            val intent = Intent(this@Android7Activity,Android41Activity::class.java)
-            startActivity(intent)
+            val appCompatActivity = this@Android7Activity
+           val android41PopWindow = Android41PopWindow(appCompatActivity)
+            android41PopWindow.showAtLocation(recyclerView,Gravity.BOTTOM,0,0)
         }
         var recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
         var myDivider = MyDivider(this,MyDivider.VERTICAL)

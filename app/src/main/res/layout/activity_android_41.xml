@@ -4,45 +4,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tool_bar"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        app:contentInsetStart="0dp" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/yuan_jiao_top_left_right_white"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:textColor="#333333"
-            android:lineSpacingExtra="4sp"
-            android:text="Mercedes Benz E200(2009)"
-            android:textSize="20sp" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                app:contentInsetStart="0dp">
 
-        <ImageView
-            android:id="@+id/iv_cancel"
-            android:layout_width="58dp"
-            android:layout_gravity="right"
-            android:padding="23dp"
-            android:src="@drawable/cancel"
-            android:layout_height="58dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Mercedes Benz E200(2009)"
+                    android:textColor="#333333"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/iv_cancel"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_gravity="right"
+                    android:padding="23dp"
+                    android:src="@drawable/cancel" />
 
 
-    </androidx.appcompat.widget.Toolbar>
+            </androidx.appcompat.widget.Toolbar>
 
-    <View
-        android:id="@+id/view_line"
-        android:layout_below="@id/tool_bar"
-        android:layout_width="match_parent"
-        android:background="#E8E8E8"
-        android:layout_height="1px"/>
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/tool_bar"
+                android:background="#E8E8E8" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_below="@id/view_line"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/view_line" />
 
+        </RelativeLayout>
 
 </RelativeLayout>
