@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="24dp"
+            app:cardBackgroundColor="#ffffff"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="69dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="18dp"
+                        android:src="@mipmap/icons8_delete_ticket_40_1" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/some_id"
+                                android:textColor="#191919"
+                                android:textSize="14sp" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="17dp"
+                                android:gravity="center_vertical"
+                                android:text="Payment due on 17 Feb 2020"
+                                android:textColor="#FC5600"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="49dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:text="$100"
+                        android:textColor="#Fc5600"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#E8E8E8" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="1 Jun 2020,  08:29 AM"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:padding="3dp"
+                        android:background="@drawable/yuan_xing_gary"
+                        android:src="@mipmap/icon_color" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="Place of offence: Boon Lay"
+                        android:textColor="#191919"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="22dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="$70"
+                        android:textColor="#191919"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="46dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Parking without display valid coupon or digital parking session"
+                    android:textColor="#9A9A9A"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:padding="3dp"
+                        android:background="@drawable/yuan_xing_gary"
+                        android:src="@mipmap/icon_color" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="Place of offence: Boon Lay"
+                        android:textColor="#191919"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="22dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="$30"
+                        android:textColor="#191919"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="46dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Parking without display valid coupon or digital parking session"
+                    android:textColor="#9A9A9A"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

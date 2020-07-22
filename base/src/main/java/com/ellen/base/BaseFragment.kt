@@ -42,10 +42,10 @@ abstract class BaseFragment : Fragment(){
         }
     }
 
-    abstract fun getLayoutId():Int
-    abstract fun initView()
-    abstract fun initData()
-    fun lazyLoading(){}
+    protected abstract fun getLayoutId():Int
+    protected abstract fun initView()
+    protected abstract fun initData()
+    protected fun lazyLoading(){}
 
 
 }

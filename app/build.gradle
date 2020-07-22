@@ -24,7 +24,7 @@ android {
     }
     //引入DataBinding
     buildFeatures{
-        dataBinding = true
+        dataBinding = false
         // for view binding :
         // viewBinding = true
     }

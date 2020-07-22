@@ -1,64 +1,36 @@
 package com.ellen.yalangmusic
 
+import android.content.Intent
+import android.os.Bundle
 import android.view.View
-import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.ellen.base.BaseActivity
-import com.ellen.yalangmusic.bean.Android7KeyValue
-import com.ellen.yalangmusic.databinding.ActivityMainBinding
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : BaseActivity(), View.OnClickListener {
-    
-    private lateinit var recyclerView: RecyclerView
-    private var android7KeyValue = Android7KeyValue("a",false,"a")
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    override fun initMVVM() {
-        val binding: ActivityMainBinding =
-            DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.test = android7KeyValue
-        recyclerView = findViewById(R.id.recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        var list: MutableList<String> = ArrayList()
-        list.add("a")
-        list.add("b")
-        list.add("a")
-        list.add("b")
-        list.add("a")
-        list.add("b")
-        list.add("a")
-        list.add("b")
+    private lateinit var bt1:Button
+    private lateinit var bt2:Button
+    private lateinit var bt3:Button
 
-//        testAdapter.onItemClickListener = object :
-//            BaseRecyclerViewAdapter.OnItemClickListener<TestAdapter.TestViewHolder, String> {
-//            override fun onItemClick(
-//                holder: TestAdapter.TestViewHolder,
-//                data: String,
-//                position: Int
-//            ) {
-//                Toast.makeText(testAdapter.mContext, data, Toast.LENGTH_SHORT).show()
-//            }
-//
-//        }
-//
-//        testAdapter.onItemLongClickListener =
-//            object :
-//                BaseRecyclerViewAdapter.OnItemLongClickListener<TestAdapter.TestViewHolder, String> {
-//                override fun onItemLongClick(
-//                    holder: TestAdapter.TestViewHolder,
-//                    data: String,
-//                    position: Int
-//                ): Boolean {
-//                    return true
-//                }
-//
-//            }
-    }
-
-    override fun setStatus() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        findViewById<Button>(R.id.bt1).setOnClickListener(this)
+        findViewById<Button>(R.id.bt2).visibility = View.GONE
+        findViewById<Button>(R.id.bt3).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
+        if(v!!.id == R.id.bt1){
+            val intent = Intent(MainActivity@this, Android7Activity::class.java)
+            startActivity(intent);
+        }else if(v!!.id == R.id.bt2){
+            val intent = Intent(MainActivity@this, Android41Activity::class.java)
+            startActivity(intent);
+        }else{
+            val intent = Intent(MainActivity@this, Android30Activity::class.java)
+            startActivity(intent);
+        }
     }
 
 }
