@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<Button>(R.id.bt1).setOnClickListener(this)
-        findViewById<Button>(R.id.bt2).visibility = View.GONE
+        findViewById<Button>(R.id.bt2).setOnClickListener(this)
         findViewById<Button>(R.id.bt3).setOnClickListener(this)
     }
 
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val intent = Intent(MainActivity@this, Android7Activity::class.java)
             startActivity(intent);
         }else if(v!!.id == R.id.bt2){
-            val intent = Intent(MainActivity@this, Android41Activity::class.java)
+            val intent = Intent(MainActivity@this, Android5Activity::class.java)
             startActivity(intent);
         }else{
             val intent = Intent(MainActivity@this, Android30Activity::class.java)

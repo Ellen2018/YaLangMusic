@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <LinearLayout
@@ -19,7 +19,7 @@
             android:layout_marginRight="24dp"
             android:gravity="center_vertical"
             android:text="View all information about your car and get the latest trade-in value of your car."
-            android:textColor="#333333"
+            android:textColor="@color/mine_shaft"
             android:textSize="13sp" />
 
         <ImageView
@@ -40,7 +40,7 @@
             android:gravity="center"
             android:lineSpacingExtra="4sp"
             android:text="Mercedes Benz E200(2009)"
-            android:textColor="#333333"
+            android:textColor="@color/mine_shaft"
             android:textSize="16sp" />
 
         <TextView
@@ -51,7 +51,7 @@
             android:layout_marginRight="99dp"
             android:gravity="center"
             android:text="SKB2654J"
-            android:textColor="#333333"
+            android:textColor="@color/mine_shaft"
             android:textSize="13sp" />
 
         <RelativeLayout
@@ -72,7 +72,7 @@
                 android:layout_marginRight="60dp"
                 android:gravity="center"
                 android:text="$123,000"
-                android:textColor="#FC5600"
+                android:textColor="@color/international_range"
                 android:textSize="14sp" />
 
             <TextView
@@ -85,7 +85,7 @@
                 android:layout_marginRight="25dp"
                 android:gravity="center"
                 android:text="Estimated trade-in value"
-                android:textColor="#191919"
+                android:textColor="@color/cod_gray2"
                 android:textSize="14sp" />
 
             <TextView
@@ -98,7 +98,7 @@
                 android:layout_marginBottom="16dp"
                 android:gravity="center"
                 android:text="Tap to refresh quote"
-                android:textColor="#9A9A9A"
+                android:textColor="@color/dusty_grey"
                 android:textSize="11sp" />
 
         </RelativeLayout>
@@ -125,7 +125,7 @@
             android:paddingRight="12dp"
             android:paddingBottom="10dp"
             android:text="View detailed information"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:textSize="14sp" />
 
     </LinearLayout>

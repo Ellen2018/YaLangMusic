@@ -5,8 +5,8 @@
 
     <!-- 边框 -->
     <stroke
-        android:width="0.3dp"
-        android:color="#E8E8E8" />
+        android:width="1dp"
+        android:color="@color/mercury" />
 
     <size
         android:width="120dp"

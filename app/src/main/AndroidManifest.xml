@@ -20,6 +20,7 @@
         <activity android:name=".Android7Activity"/>
         <activity android:name=".Android30Activity"/>
         <activity android:name=".Android41Activity"/>
+        <activity android:name=".Android5Activity"/>
     </application>
 
 </manifest>

@@ -16,7 +16,7 @@
             android:layout_marginTop="32dp"
             android:gravity="center"
             android:text="Vehicle Details"
-            android:textColor="#333333"
+            android:textColor="@color/mine_shaft"
             android:textSize="18sp" />
 
         <androidx.recyclerview.widget.RecyclerView

@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="left|center_vertical"
-                android:textColor="#191919"
+                android:textColor="@color/cod_gray2"
                 android:textSize="12sp" />
 
             <ViewStub
@@ -41,7 +41,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="left|center_vertical"
-            android:textColor="#FC5600"
+            android:textColor="@color/international_range"
             android:textSize="12sp" />
 
     </LinearLayout>

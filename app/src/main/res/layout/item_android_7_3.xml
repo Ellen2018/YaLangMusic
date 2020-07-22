@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="news_title"
-                android:textColor="#333333"
+                android:textColor="@color/mine_shaft"
                 android:textSize="14sp" />
 
             <TextView

@@ -22,7 +22,7 @@
                     android:layout_gravity="center"
                     android:lineSpacingExtra="4sp"
                     android:text="Mercedes Benz E200(2009)"
-                    android:textColor="#333333"
+                    android:textColor="@color/mine_shaft"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:layout_below="@id/tool_bar"
-                android:background="#E8E8E8" />
+                android:background="@color/mercury" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"

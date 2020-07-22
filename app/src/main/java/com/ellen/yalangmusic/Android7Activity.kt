@@ -1,24 +1,14 @@
 package com.ellen.yalangmusic
 
-import android.content.Intent
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
-import android.graphics.Rect
 import android.os.Bundle
 import android.view.Gravity
-import android.view.LayoutInflater
-import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import com.ellen.base.adapter.BaseNullAdapter
-import com.ellen.javabase.adapter.recyclerview.SuperRecyclerViewAdapter
-import com.ellen.yalangmusic.bean.Android7KeyValue
+import com.ellen.yalangmusic.bean.Android7II
 import com.ellen.yalangmusic.bean.DataConfig
 import com.ellen.yalangmusic.bean.News
 
@@ -50,7 +40,17 @@ class Android7Activity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         recyclerView.adapter = DataAdapter(DataConfig.getInitDataToAndroid7(),this)
-        baseNullAdapter.addViewByLayoutId(1,R.layout.layout_android_7_2)
+        val view2 = baseNullAdapter.addViewByLayoutId(1,R.layout.layout_android_7_2)
+        val recyclerView2 = view2.findViewById<RecyclerView>(R.id.recycler_view)
+        val  linearLayoutManager = LinearLayoutManager(this)
+        linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
+        recyclerView2.layoutManager = linearLayoutManager
+        val android7IIList:MutableList<Android7II> = ArrayList()
+        android7IIList.add(Android7II("Sell car",R.mipmap.sell_car,R.drawable.yuan_jiao_indigo))
+        android7IIList.add(Android7II("Book svc",R.mipmap.book_svc,R.drawable.yuan_jiao_indigo))
+        android7IIList.add(Android7II("View docs",R.mipmap.view_docs,R.drawable.yuan_jiao_indigo))
+        recyclerView2.adapter = Android7IIAdapter(android7IIList,this)
+
         var recyclerViewNews = baseNullAdapter.
         addViewByLayoutId(2,R.layout.layout_android_7_3).findViewById<RecyclerView>(R.id.recycler_view_news)
         recyclerViewNews.layoutManager = LinearLayoutManager(this)

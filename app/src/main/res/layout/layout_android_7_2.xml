@@ -13,124 +13,17 @@
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_gravity="center_horizontal"
-            android:text="Manager your car"
             android:lineSpacingExtra="4sp"
-            android:textColor="#333333"
+            android:text="Manager your car"
+            android:textColor="@color/mine_shaft"
             android:textSize="18sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:layout_width="70dp"
-                android:layout_height="60dp"
-                android:layout_marginRight="8dp"
-                android:background="@drawable/yuan_jiao_blue"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_sell_car"
-                        android:layout_width="33dp"
-                        android:layout_height="33dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@mipmap/icons8_cash_64_1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:gravity="center_horizontal|top"
-                        android:layout_marginTop="5dp"
-                        android:layout_below="@id/iv_sell_car"
-                        android:textSize="10sp"
-                        android:text="Sell Car"
-                        android:textColor="#ffffff" />
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="70dp"
-                android:layout_height="60dp"
-                android:layout_marginRight="8dp"
-                android:background="@drawable/yuan_jiao_blue"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_book_svc"
-                        android:layout_width="33dp"
-                        android:layout_height="33dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@mipmap/icons8_engine_oil_40_1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:gravity="center_horizontal|top"
-                        android:layout_marginTop="5dp"
-                        android:layout_below="@id/iv_book_svc"
-                        android:textSize="10sp"
-                        android:text="Book Svc"
-                        android:textColor="#ffffff" />
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="70dp"
-                android:layout_height="60dp"
-                android:layout_marginRight="8dp"
-                android:background="@drawable/yuan_jiao_blue"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_view_docs"
-                        android:layout_width="33dp"
-                        android:layout_height="33dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@mipmap/icons8_documents_96_1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:gravity="center_horizontal|top"
-                        android:layout_marginTop="5dp"
-                        android:layout_below="@id/iv_view_docs"
-                        android:textSize="10sp"
-                        android:text="Sell Car"
-                        android:textColor="#ffffff" />
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-        </LinearLayout>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
 
     </LinearLayout>
 
