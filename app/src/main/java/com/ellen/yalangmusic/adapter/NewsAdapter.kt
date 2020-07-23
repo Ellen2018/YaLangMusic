@@ -8,6 +8,10 @@ import com.ellen.base.adapter.BaseViewHolder
 import com.ellen.yalangmusic.R
 import com.ellen.yalangmusic.bean.News
 
+/**
+ * Android 5 & 7
+ * 底部图片加图文的适配器
+ */
 class NewsAdapter(dataList:MutableList<News>,mContext:Context) :
     BaseSingleRecyclerViewAdapter<NewsAdapter.NewsViewHolder, News>(dataList,mContext) {
 

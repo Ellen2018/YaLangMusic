@@ -9,7 +9,7 @@
         android:layout_width="70dp"
         android:layout_height="60dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/yuan_jiao_indigo">
+        android:background="@drawable/fillet_4_indigo">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -19,8 +19,9 @@
 
             <ImageView
                 android:id="@+id/iv"
-                android:layout_width="33dp"
-                android:layout_height="33dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="2dp"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:src="@mipmap/sell_car" />

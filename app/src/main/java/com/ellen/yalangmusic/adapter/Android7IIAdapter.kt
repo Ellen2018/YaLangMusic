@@ -10,6 +10,9 @@ import com.ellen.base.adapter.BaseViewHolder
 import com.ellen.yalangmusic.R
 import com.ellen.yalangmusic.bean.Android7II
 
+/**
+ * Android 5 & 7 中间横向方块(背景色块，上面图片，下面文字的适配器)
+ */
 class Android7IIAdapter(dataList:MutableList<Android7II>,mContext:Context)
     : BaseSingleRecyclerViewAdapter<Android7IIAdapter.Android7IIViewHolder,Android7II>(dataList,mContext){
 

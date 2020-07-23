@@ -6,7 +6,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:background="@drawable/yuan_jiao_top_left_right_white"
+            android:background="@drawable/fillet_2_top_left_right_white"
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.Toolbar

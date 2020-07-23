@@ -111,7 +111,7 @@
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         android:padding="3dp"
-                        android:background="@drawable/yuan_xing_gary"
+                        android:background="@drawable/round_alabaster2"
                         android:src="@mipmap/icon_color" />
 
                     <TextView
@@ -156,7 +156,7 @@
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         android:padding="3dp"
-                        android:background="@drawable/yuan_xing_gary"
+                        android:background="@drawable/round_alabaster2"
                         android:src="@mipmap/icon_color" />
 
                     <TextView

@@ -3,19 +3,13 @@ package com.ellen.yalangmusic.activity
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.TextView
-import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentPagerAdapter
-import androidx.fragment.app.FragmentStatePagerAdapter
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
-import com.ellen.javabase.adapter.viewpager.BaseFragmentStateAdapter
 import com.ellen.yalangmusic.fragment.AllFinesFragment
 import com.ellen.yalangmusic.R
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import androidx.viewpager2.adapter.FragmentStateAdapter as Frag
 
 class Android30Activity : AppCompatActivity() {
 
@@ -53,7 +47,7 @@ class Android30Activity : AppCompatActivity() {
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabReselected(p0: TabLayout.Tab?) {
                 val tv = p0!!.customView!!.findViewById<TextView>(R.id.tv_text)
-                tv.setBackgroundResource(R.drawable.yuan_jiao_left_right_gary)
+                tv.setBackgroundResource(R.drawable.fillet_4_left_right_alabaster2)
                 tv.setTextColor(Color.parseColor("#FC5600"))
             }
 
@@ -65,7 +59,7 @@ class Android30Activity : AppCompatActivity() {
 
             override fun onTabSelected(p0: TabLayout.Tab?) {
                 val tv = p0!!.customView!!.findViewById<TextView>(R.id.tv_text)
-                tv.setBackgroundResource(R.drawable.yuan_jiao_left_right_gary)
+                tv.setBackgroundResource(R.drawable.fillet_4_left_right_alabaster2)
                 tv.setTextColor(Color.parseColor("#FC5600"))
             }
         })

@@ -27,8 +27,8 @@ class Android5Activity : AppCompatActivity() {
         val baseNullAdapter = BaseNullAdapter(this)
         recyclerView.adapter = baseNullAdapter
 
+        //区域1
         val view1 = baseNullAdapter.addViewByLayoutId(0, R.layout.layout_5_1)
-
         val recyclerView1 = view1.findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView1.layoutManager = LinearLayoutManager(this)
         recyclerView1.adapter = DataAdapter(DataConfig.initData1(), this)
@@ -38,7 +38,7 @@ class Android5Activity : AppCompatActivity() {
         )
         ContextCompat.getDrawable(
             this,
-            R.drawable.line_recycler_view_gary
+            R.drawable.line_recycler_view_mercury
         )?.let {
             myDivider.setDrawable(
                 it
@@ -46,6 +46,7 @@ class Android5Activity : AppCompatActivity() {
         }
         recyclerView1.addItemDecoration(myDivider)
 
+        //区域2
         val view2 = baseNullAdapter.addViewByLayoutId(
             1,
             R.layout.layout_android_7_2
@@ -59,33 +60,34 @@ class Android5Activity : AppCompatActivity() {
             Android7II(
                 "Get Help",
                 R.mipmap.get_help,
-                R.drawable.yuan_jiao_blaze_orange
+                R.drawable.fillet_4_blaze_orange
             )
         )
         android7IIList.add(
             Android7II(
                 "View docs",
                 R.mipmap.view_docs,
-                R.drawable.yuan_jiao_indigo
+                R.drawable.fillet_4_indigo
             )
         )
         android7IIList.add(
             Android7II(
                 "Payments",
                 R.mipmap.payments,
-                R.drawable.yuan_jiao_indigo
+                R.drawable.fillet_4_indigo
             )
         )
         android7IIList.add(
             Android7II(
                 "Cancel sub",
                 R.mipmap.cancel_sub,
-                R.drawable.yuan_jiao_burnt_sienna
+                R.drawable.fillet_4_burnt_sienna
             )
         )
         recyclerView2.adapter =
             Android7IIAdapter(android7IIList, this)
 
+        //区域3
         val view3 = baseNullAdapter.addViewByLayoutId(
             2,
             R.layout.layout_android_7_3

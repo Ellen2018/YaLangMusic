@@ -61,25 +61,48 @@
             android:layout_marginLeft="70dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="70dp"
-            android:background="@drawable/yuan_jiao_gary">
+            android:background="@drawable/fillet_4_alabaster2">
 
-            <TextView
-                android:id="@+id/tv_dollar"
+            <RelativeLayout
+                android:id="@+id/rl_dollar"
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
-                android:layout_marginLeft="60dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginRight="60dp"
-                android:gravity="center"
-                android:text="$123,000"
-                android:textColor="@color/international_orange"
-                android:textSize="14sp" />
+                android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="$"
+                        android:textColor="@color/international_orange"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:text="123,000"
+                        android:textColor="@color/international_orange"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/tv_estimated"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_below="@id/tv_dollar"
+                android:layout_below="@id/rl_dollar"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginRight="25dp"
@@ -118,7 +141,7 @@
             android:layout_height="35dp"
             android:layout_gravity="center"
             android:layout_marginTop="12dp"
-            android:background="@drawable/yuan_jiao_orange"
+            android:background="@drawable/fillet_4_blaze_orange"
             android:gravity="center"
             android:paddingLeft="12dp"
             android:paddingTop="10dp"

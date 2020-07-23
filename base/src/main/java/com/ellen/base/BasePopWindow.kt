@@ -16,7 +16,6 @@ abstract class BasePopWindow() : ShowPopWindow {
     private lateinit var activityWeakReference: WeakReference<Activity>
     protected lateinit var mContentView:View
     var onDismissListener: BasePopWindow.OnDismissListener? = null
-    protected var isCanCelAnHua = false
 
     constructor(activity: AppCompatActivity) : this() {
         activityWeakReference = WeakReference(activity)
@@ -29,12 +28,9 @@ abstract class BasePopWindow() : ShowPopWindow {
             popWindow.setBackgroundDrawable(setBackgroundDrawable())
         }
         // 设置PopupWindow是否能响应外部点击事件
-        // 设置PopupWindow是否能响应外部点击事件
         popWindow.isOutsideTouchable = isResponseOutsideTouchable()
         // 设置PopupWindow是否能响应点击事件
-        // 设置PopupWindow是否能响应点击事件
         popWindow.isTouchable = isResponseTouchable()
-        //设置其它，例如：可以通过这个方法完成虚拟键盘适配等
         //设置其它，例如：可以通过这个方法完成虚拟键盘适配等
         setOtherSetting(popWindow)
         popWindow.setOnDismissListener(PopupWindow.OnDismissListener {
@@ -42,7 +38,7 @@ abstract class BasePopWindow() : ShowPopWindow {
                 onDismissListener!!.dismiss()
             }
             //判断是否暗化
-            if (isSetShowBackgroundBlack()!! && !isCanCelAnHua) {
+            if (isSetShowBackgroundBlack()!!) {
                 //去掉暗色背景
                 val lp =
                     activityWeakReference.get()!!.window.attributes
@@ -90,7 +86,7 @@ abstract class BasePopWindow() : ShowPopWindow {
         dismissBefore()
         //解除绑定
         //如果设置了背景暗化，那么这里去除背景暗化
-        if (isSetShowBackgroundBlack()!! && !isCanCelAnHua) {
+        if (isSetShowBackgroundBlack()!!) {
             //去掉暗色背景
             val lp =
                 activityWeakReference.get()!!.window.attributes

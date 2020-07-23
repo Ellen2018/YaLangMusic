@@ -7,6 +7,9 @@ import com.ellen.base.adapter.BaseViewHolder
 import com.ellen.yalangmusic.R
 import com.ellen.yalangmusic.bean.Android30
 
+/**
+ * Android 30 适配器
+ */
 class Android30Adapter(dataList: MutableList<Android30>, mContext: Context) :
     BaseSingleRecyclerViewAdapter<Android30Adapter.Android30ViewHolder, Android30>(
         dataList,

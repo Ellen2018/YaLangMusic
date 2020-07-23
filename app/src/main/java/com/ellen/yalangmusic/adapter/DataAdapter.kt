@@ -9,6 +9,10 @@ import com.ellen.base.adapter.BaseViewHolder
 import com.ellen.yalangmusic.R
 import com.ellen.yalangmusic.bean.Android7KeyValue
 
+/**
+ * Android 5 & 7 & 40 界面都用到这个适配器
+ *
+ */
 class DataAdapter(dataList:MutableList<Android7KeyValue>,mContext:Context) :
     BaseSingleRecyclerViewAdapter<DataAdapter.DataViewHolder, Android7KeyValue>(dataList,mContext) {
 

@@ -49,7 +49,7 @@ class Android41PopWindow(appCompatActivity: AppCompatActivity) : BasePopWindow(a
             MyDivider.VERTICAL
         )
         ContextCompat.getDrawable(getContext()!!,
-            R.drawable.line_recycler_view_gary
+            R.drawable.line_recycler_view_mercury
         )?.let {
             myDivider.setDrawable(
                 it
