@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ellen.base.adapter.BaseNullAdapter
 import com.ellen.yalangmusic.R
 import com.ellen.yalangmusic.adapter.Android5Adapter
-import com.ellen.yalangmusic.bean.YourNameDivers
+import com.ellen.yalangmusic.bean.UserIDCardMessage
 
 class Android5Activity : AppCompatActivity(){
 
@@ -31,17 +31,18 @@ class Android5Activity : AppCompatActivity(){
         //区域3
         val view3 = baseNullAdapter.addViewByLayoutId(2,R.layout.layout_android_5_3)
         val recyclerView3 = view3.findViewById<RecyclerView>(R.id.recycler_view)
+        //这里需要调间距
         recyclerView3.layoutManager = GridLayoutManager(this,3)
-        val dataList:MutableList<YourNameDivers> = ArrayList()
-        dataList.add(YourNameDivers("Mobile Number","90685298"))
-        dataList.add(YourNameDivers("National ID","*****631Z"))
-        dataList.add(YourNameDivers("Driving Licence No","*****631Z"))
-        dataList.add(YourNameDivers("Date of Birth","16 Apr 1980"))
-        dataList.add(YourNameDivers("Marital Status","Married "))
-        dataList.add(YourNameDivers("Licence Reg Date","16 Apr 2000"))
-        dataList.add(YourNameDivers("Gender","Male"))
-        dataList.add(YourNameDivers("",""))
-        dataList.add(YourNameDivers("Driving Exp(Years)","10"))
+        val dataList:MutableList<UserIDCardMessage> = ArrayList()
+        dataList.add(UserIDCardMessage("Mobile Number","90685298"))
+        dataList.add(UserIDCardMessage("National ID","*****631Z"))
+        dataList.add(UserIDCardMessage("Driving Licence No","*****631Z"))
+        dataList.add(UserIDCardMessage("Date of Birth","16 Apr 1980"))
+        dataList.add(UserIDCardMessage("Marital Status","Married "))
+        dataList.add(UserIDCardMessage("Licence Reg Date","16 Apr 2000"))
+        dataList.add(UserIDCardMessage("Gender","Male"))
+        dataList.add(UserIDCardMessage("",""))
+        dataList.add(UserIDCardMessage("Driving Exp(Years)","10"))
         recyclerView3.adapter = Android5Adapter(dataList,this)
 
         //区域4

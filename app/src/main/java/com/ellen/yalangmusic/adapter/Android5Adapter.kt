@@ -3,13 +3,12 @@ package com.ellen.yalangmusic.adapter
 import android.content.Context
 import android.view.View
 import android.widget.TextView
-import com.ellen.base.adapter.BaseNullAdapter
 import com.ellen.base.adapter.BaseSingleRecyclerViewAdapter
 import com.ellen.yalangmusic.R
-import com.ellen.yalangmusic.bean.YourNameDivers
+import com.ellen.yalangmusic.bean.UserIDCardMessage
 
-class Android5Adapter(dataList:MutableList<YourNameDivers>,mContext:Context)
-    : BaseSingleRecyclerViewAdapter<Android5Adapter.Android5ViewHolder,YourNameDivers>(dataList,mContext){
+class Android5Adapter(dataList:MutableList<UserIDCardMessage>, mContext:Context)
+    : BaseSingleRecyclerViewAdapter<Android5Adapter.Android5ViewHolder,UserIDCardMessage>(dataList,mContext){
 
 
     class Android5ViewHolder(itemView: View) : com.ellen.base.adapter.BaseViewHolder(itemView){
@@ -25,7 +24,7 @@ class Android5Adapter(dataList:MutableList<YourNameDivers>,mContext:Context)
         return Android5ViewHolder(view)
     }
 
-    override fun showData(holder: Android5ViewHolder, data: YourNameDivers, position: Int) {
+    override fun showData(holder: Android5ViewHolder, data: UserIDCardMessage, position: Int) {
         holder.tvKey.text = data.key
         holder.tvValue.text = data.value
     }
