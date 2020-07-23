@@ -11,7 +11,7 @@ import com.ellen.yalangmusic.activity.Android5Activity
 import com.ellen.yalangmusic.activity.Android7Activity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
