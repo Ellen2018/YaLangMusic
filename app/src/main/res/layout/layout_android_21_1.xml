@@ -84,7 +84,7 @@
                     android:gravity="center"
                     android:text="1,480 km"
                     android:textColor="@color/international_orange"
-                    android:textSize="24sp" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -124,6 +124,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="bottom"
                             android:text="$"
+                            android:textSize="10sp"
                             android:textColor="@color/international_orange" />
 
                         <TextView
@@ -133,7 +134,7 @@
                             android:gravity="center"
                             android:text="488"
                             android:textColor="@color/international_orange"
-                            android:textSize="24sp" />
+                            android:textSize="14sp" />
 
                     </LinearLayout>
 
@@ -162,31 +163,6 @@
             android:text="last updated: 31/06/2020"
             android:textColor="@color/dusty_grey"
             android:textSize="11sp" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="24dp"
-            android:nestedScrollingEnabled="false" />
-
-        <TextView
-            android:id="@+id/tv_view_detailed"
-            android:layout_width="203dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/fillet_4_blaze_orange"
-            android:gravity="center"
-            android:paddingLeft="12dp"
-            android:paddingTop="10dp"
-            android:paddingRight="12dp"
-            android:paddingBottom="10dp"
-            android:text="Customize your Insurance"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
 
     </LinearLayout>
 

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:gravity="center"
+            android:text="Your insurance excess"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Your insurance excess:"
+            android:textColor="@color/cod_gray2"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/opreator_down"
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="$"
+                        android:textColor="@color/international_orange"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:text="2,000"
+                        android:textColor="@color/international_orange"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/opreator_down"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="80dp"
+            android:gravity="center"
+            android:text="Other Information"
+            android:textColor="@color/cod_gray2"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

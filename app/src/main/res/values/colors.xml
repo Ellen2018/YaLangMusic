@@ -62,6 +62,7 @@
     <color name="error_red">#E74C3C</color>
 
     <!--    新添加的-->
+    <color name="black">#000000</color>
     <color name="international_orange">#FC5600</color>
     <color name="cod_gray2">#191919</color>
     <color name="steel_blue">#40879D</color>

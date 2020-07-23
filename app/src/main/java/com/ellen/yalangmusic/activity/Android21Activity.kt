@@ -28,10 +28,14 @@ class Android21Activity : AppCompatActivity() {
         recyclerView.adapter = baseNullAdapter
 
         //区域1
-        val view1 = baseNullAdapter.addViewByLayoutId(0, R.layout.layout_21_1)
-        val recyclerView1 = view1.findViewById<RecyclerView>(R.id.recycler_view)
-        recyclerView1.layoutManager = LinearLayoutManager(this)
-        recyclerView1.adapter = DataAdapter(DataConfig.initData1(), this)
+        val view1 = baseNullAdapter.addViewByLayoutId(0, R.layout.layout_android_21_1)
+
+        //区域2
+        val view2 = baseNullAdapter.addViewByLayoutId(1,R.layout.layout_android_21_2)
+
+        val recyclerView2 = view2.findViewById<RecyclerView>(R.id.recycler_view)
+        recyclerView2.layoutManager = LinearLayoutManager(this)
+        recyclerView2.adapter = DataAdapter(DataConfig.initData1(), this)
         //分割线
         val myDivider = MyDivider(
             this,
@@ -45,17 +49,17 @@ class Android21Activity : AppCompatActivity() {
                 it
             )
         }
-        recyclerView1.addItemDecoration(myDivider)
+        recyclerView2.addItemDecoration(myDivider)
 
-        //区域2
-        val view2 = baseNullAdapter.addViewByLayoutId(
-            1,
+        //区域3
+        val view3 = baseNullAdapter.addViewByLayoutId(
+            2,
             R.layout.layout_android_7_2
         )
-        val recyclerView2 = view2.findViewById<RecyclerView>(R.id.recycler_view)
+        val recyclerView3 = view3.findViewById<RecyclerView>(R.id.recycler_view)
         val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
-        recyclerView2.layoutManager = linearLayoutManager
+        recyclerView3.layoutManager = linearLayoutManager
         val android7IIList: MutableList<Android7II> = ArrayList()
         android7IIList.add(
             Android7II(
@@ -85,16 +89,16 @@ class Android21Activity : AppCompatActivity() {
                 R.drawable.fillet_4_burnt_sienna
             )
         )
-        recyclerView2.adapter =
+        recyclerView3.adapter =
             Android7IIAdapter(android7IIList, this)
 
         //区域3
-        val view3 = baseNullAdapter.addViewByLayoutId(
-            2,
+        val view4 = baseNullAdapter.addViewByLayoutId(
+            3,
             R.layout.layout_android_7_3
         )
-        val recyclerView3 = view3.findViewById<RecyclerView>(R.id.recycler_view_news)
-        recyclerView3.layoutManager = LinearLayoutManager(this)
+        val recyclerView4 = view4.findViewById<RecyclerView>(R.id.recycler_view_news)
+        recyclerView4.layoutManager = LinearLayoutManager(this)
         val newsList: MutableList<News> = ArrayList()
         newsList.add(
             News(
@@ -102,9 +106,9 @@ class Android21Activity : AppCompatActivity() {
                 "Time for your regular servicing?Claim your first 20% off Servicing or repairs voucher with us"
             )
         )
-        recyclerView3.adapter =
+        recyclerView4.adapter =
             NewsAdapter(newsList, this)
-        recyclerView3.addItemDecoration(myDivider)
+        recyclerView4.addItemDecoration(myDivider)
     }
 
 }
