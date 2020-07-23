@@ -7,6 +7,9 @@ import com.ellen.base.adapter.BaseSingleRecyclerViewAdapter
 import com.ellen.yalangmusic.R
 import com.ellen.yalangmusic.bean.UserIDCardMessage
 
+/**
+ * 用户身份信息RecyclerView
+ */
 class Android5Adapter(dataList:MutableList<UserIDCardMessage>, mContext:Context)
     : BaseSingleRecyclerViewAdapter<Android5Adapter.Android5ViewHolder,UserIDCardMessage>(dataList,mContext){
 

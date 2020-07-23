@@ -11,11 +11,7 @@ import com.ellen.yalangmusic.activity.Android5Activity
 import com.ellen.yalangmusic.activity.Android7Activity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-
-    private lateinit var bt1:Button
-    private lateinit var bt2:Button
-    private lateinit var bt3:Button
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
