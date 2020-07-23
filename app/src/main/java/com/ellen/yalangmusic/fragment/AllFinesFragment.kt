@@ -1,8 +1,10 @@
-package com.ellen.yalangmusic
+package com.ellen.yalangmusic.fragment
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ellen.base.BaseFragment
+import com.ellen.yalangmusic.R
+import com.ellen.yalangmusic.adapter.Android30Adapter
 import com.ellen.yalangmusic.bean.Android30
 
 class AllFinesFragment : BaseFragment() {
@@ -19,7 +21,8 @@ class AllFinesFragment : BaseFragment() {
         var dataList:MutableList<Android30> = ArrayList()
         dataList.add(Android30())
         dataList.add(Android30())
-        recyclerView.adapter = Android30Adapter(dataList,context!!)
+        recyclerView.adapter =
+            Android30Adapter(dataList, context!!)
     }
 
     override fun initData() {

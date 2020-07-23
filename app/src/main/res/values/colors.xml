@@ -62,7 +62,7 @@
     <color name="error_red">#E74C3C</color>
 
     <!--    新添加的-->
-    <color name="international_range">#FC5600</color>
+    <color name="international_orange">#FC5600</color>
     <color name="cod_gray2">#191919</color>
     <color name="steel_blue">#40879D</color>
     <color name="steel_blue2">#4E7AB5</color>
@@ -71,5 +71,6 @@
     <color name="burnt_sienna2">#EB6060</color>
     <color name="alabaster2">#FAFAFA</color>
     <color name="blaze_orange">#FC6900</color>
+    <color name="alto2">#DFDFDF</color>
 
 </resources>

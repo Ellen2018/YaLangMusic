@@ -1,13 +1,12 @@
-package com.ellen.yalangmusic
+package com.ellen.yalangmusic.adapter
 
 import android.content.Context
-import android.view.TextureView
 import android.view.View
 import android.view.ViewStub
-import android.widget.ImageView
 import android.widget.TextView
 import com.ellen.base.adapter.BaseSingleRecyclerViewAdapter
 import com.ellen.base.adapter.BaseViewHolder
+import com.ellen.yalangmusic.R
 import com.ellen.yalangmusic.bean.Android7KeyValue
 
 class DataAdapter(dataList:MutableList<Android7KeyValue>,mContext:Context) :

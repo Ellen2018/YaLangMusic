@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.ellen.yalangmusic.activity.Android30Activity
+import com.ellen.yalangmusic.activity.Android5Activity
+import com.ellen.yalangmusic.activity.Android7Activity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 

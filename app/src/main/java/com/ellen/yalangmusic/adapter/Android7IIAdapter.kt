@@ -1,4 +1,4 @@
-package com.ellen.yalangmusic
+package com.ellen.yalangmusic.adapter
 
 import android.content.Context
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import com.ellen.base.adapter.BaseSingleRecyclerViewAdapter
 import com.ellen.base.adapter.BaseViewHolder
+import com.ellen.yalangmusic.R
 import com.ellen.yalangmusic.bean.Android7II
 
 class Android7IIAdapter(dataList:MutableList<Android7II>,mContext:Context)
@@ -24,7 +25,9 @@ class Android7IIAdapter(dataList:MutableList<Android7II>,mContext:Context)
     }
 
     override fun getItemViewHolder(view: View): Android7IIViewHolder {
-       return Android7IIViewHolder(view)
+       return Android7IIViewHolder(
+           view
+       )
     }
 
     override fun showData(holder: Android7IIViewHolder, data: Android7II, position: Int) {

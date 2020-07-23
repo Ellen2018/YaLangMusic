@@ -1,10 +1,11 @@
-package com.ellen.yalangmusic
+package com.ellen.yalangmusic.adapter
 
 import android.content.Context
 import android.view.View
 import android.widget.TextView
 import com.ellen.base.adapter.BaseSingleRecyclerViewAdapter
 import com.ellen.base.adapter.BaseViewHolder
+import com.ellen.yalangmusic.R
 import com.ellen.yalangmusic.bean.News
 
 class NewsAdapter(dataList:MutableList<News>,mContext:Context) :

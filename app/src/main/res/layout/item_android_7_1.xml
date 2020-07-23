@@ -41,7 +41,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="left|center_vertical"
-            android:textColor="@color/international_range"
+            android:textColor="@color/international_orange"
             android:textSize="12sp" />
 
     </LinearLayout>

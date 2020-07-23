@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="View all information about your subscription and get any help you require"
+            android:textColor="@color/mine_shaft"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="164dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/android_5_car" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="75dp"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:text="Toyota Wish(2018)"
+            android:textColor="@color/mine_shaft"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:layout_marginLeft="99dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="99dp"
+            android:gravity="center"
+            android:text="SKB2654J"
+            android:textColor="@color/mine_shaft"
+            android:textSize="13sp" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:text="14 days left"
+            android:layout_gravity="right"
+            android:textSize="11sp"
+            android:textColor="@color/mine_shaft"
+            android:layout_marginTop="2dp"/>
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:progress="80"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progressbar"
+            android:layout_marginTop="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:layout_height="56dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="1,480 km"
+                    android:gravity="center"
+                    android:textColor="@color/international_orange"
+                    android:textSize="24sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="34dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textColor="@color/cod_gray2"
+                    android:text="Driven this month"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"/>
+                
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:background="@color/mercury"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="$488"
+                    android:gravity="center"
+                    android:textColor="@color/international_orange"
+                    android:textSize="24sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="34dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textColor="@color/cod_gray2"
+                    android:text="Usage due this month"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:text="last updated: 31/06/2020"
+            android:textSize="11sp"
+            android:textColor="@color/dusty_grey"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="24dp"
+            android:nestedScrollingEnabled="false" />
+
+        <TextView
+            android:id="@+id/tv_view_detailed"
+            android:layout_width="203dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/yuan_jiao_orange"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="10dp"
+            android:text="Customize your Insurance"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

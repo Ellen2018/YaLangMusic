@@ -67,7 +67,7 @@
                                 android:layout_height="17dp"
                                 android:gravity="center_vertical"
                                 android:text="Payment due on 17 Feb 2020"
-                                android:textColor="@color/international_range"
+                                android:textColor="@color/international_orange"
                                 android:textSize="12sp" />
 
                         </LinearLayout>
@@ -80,7 +80,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="15dp"
                         android:text="$100"
-                        android:textColor="@color/international_range"
+                        android:textColor="@color/international_orange"
                         android:textSize="16sp" />
 
                 </LinearLayout>

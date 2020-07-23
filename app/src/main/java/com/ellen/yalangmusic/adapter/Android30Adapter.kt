@@ -1,10 +1,10 @@
-package com.ellen.yalangmusic
+package com.ellen.yalangmusic.adapter
 
 import android.content.Context
 import android.view.View
-import android.widget.BaseAdapter
 import com.ellen.base.adapter.BaseSingleRecyclerViewAdapter
 import com.ellen.base.adapter.BaseViewHolder
+import com.ellen.yalangmusic.R
 import com.ellen.yalangmusic.bean.Android30
 
 class Android30Adapter(dataList: MutableList<Android30>, mContext: Context) :
@@ -21,7 +21,9 @@ class Android30Adapter(dataList: MutableList<Android30>, mContext: Context) :
     }
 
     override fun getItemViewHolder(view: View): Android30ViewHolder {
-        return Android30ViewHolder(view)
+        return Android30ViewHolder(
+            view
+        )
     }
 
     override fun showData(holder: Android30ViewHolder, data: Android30, position: Int) {

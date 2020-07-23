@@ -29,7 +29,7 @@
             android:layout_marginLeft="98dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="98dp"
-            android:src="@mipmap/android_7_1_car" />
+            android:src="@mipmap/android_7_car" />
 
         <TextView
             android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                 android:layout_marginRight="60dp"
                 android:gravity="center"
                 android:text="$123,000"
-                android:textColor="@color/international_range"
+                android:textColor="@color/international_orange"
                 android:textSize="14sp" />
 
             <TextView

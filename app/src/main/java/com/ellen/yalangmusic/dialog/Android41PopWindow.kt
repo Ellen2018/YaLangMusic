@@ -1,4 +1,4 @@
-package com.ellen.yalangmusic
+package com.ellen.yalangmusic.dialog
 
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
@@ -13,7 +13,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ellen.base.BasePopWindow
 import com.ellen.base.adapter.BaseNullAdapter
+import com.ellen.yalangmusic.R
+import com.ellen.yalangmusic.adapter.DataAdapter
 import com.ellen.yalangmusic.bean.DataConfig
+import com.ellen.yalangmusic.utils.MyDivider
 
 
 class Android41PopWindow(appCompatActivity: AppCompatActivity) : BasePopWindow(appCompatActivity) {
@@ -32,13 +35,22 @@ class Android41PopWindow(appCompatActivity: AppCompatActivity) : BasePopWindow(a
         recyclerView.layoutManager = LinearLayoutManager(getContext())
         var baseNullAdapter = BaseNullAdapter(getContext()!!)
         recyclerView.adapter = baseNullAdapter
-        val view1 = baseNullAdapter.addViewByLayoutId(0,R.layout.layout_android_40_1)
-        val view2 = baseNullAdapter.addViewByLayoutId(1,R.layout.layout_android_40_1)
+        val view1 = baseNullAdapter.addViewByLayoutId(0,
+            R.layout.layout_android_40_1
+        )
+        val view2 = baseNullAdapter.addViewByLayoutId(1,
+            R.layout.layout_android_40_1
+        )
         view2.findViewById<TextView>(R.id.tv_title).text = "Regulatory Details"
         val recyclerView1 = view1.findViewById<RecyclerView>(R.id.recycler_view)
         val recyclerView2 = view2.findViewById<RecyclerView>(R.id.recycler_view)
-        var myDivider = MyDivider(getContext(),MyDivider.VERTICAL)
-        ContextCompat.getDrawable(getContext()!!,R.drawable.line_recycler_view_gary)?.let {
+        var myDivider = MyDivider(
+            getContext(),
+            MyDivider.VERTICAL
+        )
+        ContextCompat.getDrawable(getContext()!!,
+            R.drawable.line_recycler_view_gary
+        )?.let {
             myDivider.setDrawable(
                 it
             )
@@ -47,14 +59,21 @@ class Android41PopWindow(appCompatActivity: AppCompatActivity) : BasePopWindow(a
         recyclerView2.layoutManager = LinearLayoutManager(getContext())
         recyclerView1.addItemDecoration(myDivider)
         recyclerView2.addItemDecoration(myDivider)
-        recyclerView1.adapter = DataAdapter(DataConfig.initData1(),getContext()!!)
-        recyclerView2.adapter = DataAdapter(DataConfig.initData2(),getContext()!!)
+        recyclerView1.adapter = DataAdapter(
+            DataConfig.initData1(),
+            getContext()!!
+        )
+        recyclerView2.adapter = DataAdapter(
+            DataConfig.initData2(),
+            getContext()!!
+        )
         return view
     }
 
     override fun setOtherSetting(popupWindow: PopupWindow?) {
         super.setOtherSetting(popupWindow)
-        popupWindow!!.animationStyle = R.style.popwindow_anim_style
+        popupWindow!!.animationStyle =
+            R.style.popwindow_anim_style
     }
 
     override fun setWidth(): Int {
