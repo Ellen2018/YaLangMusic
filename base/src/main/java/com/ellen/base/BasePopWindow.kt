@@ -4,6 +4,7 @@ package com.ellen.base
 import android.app.Activity
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.PopupWindow
@@ -17,7 +18,7 @@ abstract class BasePopWindow() : ShowPopWindow {
     protected lateinit var mContentView:View
     var onDismissListener: BasePopWindow.OnDismissListener? = null
 
-    constructor(activity: AppCompatActivity) : this() {
+    constructor(activity: Activity) : this() {
         activityWeakReference = WeakReference(activity)
     }
 
@@ -80,6 +81,11 @@ abstract class BasePopWindow() : ShowPopWindow {
     override fun showAtLocation(parentView: View, gravity: Int, x: Int, y: Int) {
         showInit()
         popWindow.showAtLocation(parentView,gravity,x,y)
+    }
+
+    fun showDownCenter(parentView: View){
+
+        showAsDropDown(parentView,0,0,Gravity.CENTER)
     }
 
     override fun dismiss() {

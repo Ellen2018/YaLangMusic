@@ -15,24 +15,25 @@ import com.ellen.yalangmusic.bean.DataConfig
 import com.ellen.yalangmusic.bean.News
 import com.ellen.yalangmusic.utils.MyDivider
 
-class Android5Activity : AppCompatActivity() {
+class Android21Activity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_5)
+        setContentView(R.layout.activity_21)
         recyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
         val baseNullAdapter = BaseNullAdapter(this)
         recyclerView.adapter = baseNullAdapter
 
         //区域1
-        val view1 = baseNullAdapter.addViewByLayoutId(0, R.layout.layout_5_1)
+        val view1 = baseNullAdapter.addViewByLayoutId(0, R.layout.layout_21_1)
         val recyclerView1 = view1.findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView1.layoutManager = LinearLayoutManager(this)
         recyclerView1.adapter = DataAdapter(DataConfig.initData1(), this)
-        var myDivider = MyDivider(
+        //分割线
+        val myDivider = MyDivider(
             this,
             MyDivider.VERTICAL
         )
@@ -92,8 +93,8 @@ class Android5Activity : AppCompatActivity() {
             2,
             R.layout.layout_android_7_3
         )
-        val recyclerView = view3.findViewById<RecyclerView>(R.id.recycler_view_news)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        val recyclerView3 = view3.findViewById<RecyclerView>(R.id.recycler_view_news)
+        recyclerView3.layoutManager = LinearLayoutManager(this)
         val newsList: MutableList<News> = ArrayList()
         newsList.add(
             News(
@@ -101,8 +102,9 @@ class Android5Activity : AppCompatActivity() {
                 "Time for your regular servicing?Claim your first 20% off Servicing or repairs voucher with us"
             )
         )
-        recyclerView.adapter =
+        recyclerView3.adapter =
             NewsAdapter(newsList, this)
+        recyclerView3.addItemDecoration(myDivider)
     }
 
 }

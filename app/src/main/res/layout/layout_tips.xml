@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/iv_tips"
-        android:layout_width="12dp"
-        android:layout_height="12dp"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
         android:background="@drawable/round_steel_blue2"
         android:padding="3dp"
         android:src="@mipmap/vector" />
